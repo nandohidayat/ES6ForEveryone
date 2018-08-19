@@ -10,8 +10,24 @@
         const fullNames = names.map(function(name) {
             return `${name} keceh`;
         });
+        
+        const fullNames2 = names.map((name) => {
+            return `${name} keceh`;
+        });
+        
+        const fullNames3 = names.map(name => {
+            return `${name} keceh`;
+        });
+        
+        const fullNames4 = names.map(name => `${name} keceh`);
+        
+        const fullNames5 = names.map(() => `emang keceh`);
 
-        console.log(fullNames);
+        const sayMyName = (name) => {
+            alert(`Hello ${name}!`)
+        }
+
+        sayMyName('Nando');
     </script>
 </body>
 </html>
