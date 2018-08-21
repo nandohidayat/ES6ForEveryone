@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            first: 'Nando',
+            last: 'Hidayat',
+            country: 'Indonesia',
+            city: 'Semarang',
+            github: '@nandohidayat'
+        };
+
+        const { first, last, github } = person;
+
+        const Nando = {
+            first: 'Nando',
+            last: 'Hidayat',
+            links: {
+                social: {
+                    facebook: 'https://web.facebook.com/Dblacksand',
+                    github: 'https://github.com/nandohidayat'
+                },
+                web: {
+                    blog: 'https://nando.com'
+                }
+            }
+        }
+
+        const { facebook: fb, github: gh } = Nando.links.social;
+
+        const settings = { width: 300, color: 'black' };
+        const { width = 100, height = 100, color = 'blue', fontSize = 25 } = settings;
+    </script>
+</body>
+
+</html>
