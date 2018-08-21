@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuing Arrays</title>
+</head>
+<body>
+    <script>
+        const details = ['Nando', 123, 'nando.com'];
+        const [name, id, web] = details;
+
+        const data = 'Basketball,Sport,90210,23,Nando,Hidayat';
+        const [itemName, category, sku, inventory] = data.split(',');
+
+        const team = ['Nando', 'Sita', 'Raissa', 'Dini', 'Fitri'];
+        const [captain, assistant, ...players] = team;
+    </script>    
+</body>
+</html>
