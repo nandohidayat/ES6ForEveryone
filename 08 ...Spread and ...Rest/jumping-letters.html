@@ -35,8 +35,10 @@
 
     <script>
         const jump = document.querySelector('.jump');
-        const spread = [...jump.textContent].map((word) => `<span>${word}</span>`);
-        jump.innerHTML = spread.reduce((prev,next) => `${prev}${next}`);
+        const spread = [...jump.textContent]
+            .map((word) => `<span>${word}</span>`)
+            .join('');
+        jump.innerHTML = spread;
     </script>
 </body>
 
