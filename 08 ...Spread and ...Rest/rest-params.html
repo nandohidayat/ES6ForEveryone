@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>...Rest Params</title>
+</head>
+<body>
+    <script>
+        // function convertCurrency(rate, ...amounts) {
+        //     return amounts.map(amount => amount * rate);
+        // }
+
+        // convertCurrency(1.15, 27, 6, 97, 26, 1, 98);
+
+        const runner = ['Nando', 123, 5.5, 5, 3, 6, 35];
+        const [name, id, ...run] = runner;
+
+        const team = ['Nando', 'Sita', 'Raissa', 'Dini', 'Fitri'];
+        const [captain, assistant, ...player] = team;
+    </script>
+</body>
+</html>
