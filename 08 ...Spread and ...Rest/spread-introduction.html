@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The ...Spread Operator</title>
+</head>
+<body>
+    <script>
+        const featured = ['Deep Dish', 'Peperoni', 'Hawaiian'];
+        const speciality = ['Meatzza', 'Spicy Mama', 'Margherita'];
+
+        const pizzas = [...featured, 'veg', ...speciality];
+        const fridayPizzas = [...pizzas]; // make a whole copy. not just passing reference
+
+        const deepDish = {
+            pizzaName: 'Deep Dish',
+            size: 'Medium',
+            ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+        };
+    </script>
+</body>
+</html>
