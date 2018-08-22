@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spreading in to a Function</title>
+</head>
+<body>
+    <script>
+        const investors = ['Einstein', 'Newton', 'Galileo'];
+        const newInventors = ['Musk', 'Jobs'];
+        investors.push(...newInventors);
+        
+        const name = ['Nando', 'Hidayat'];
+        function sayHi(first, last) {
+            alert(`Hi there ${first} ${last}`);
+        }
+    </script>    
+</body>
+</html>
