@@ -1,3 +1,6 @@
+/* globals twttr */
+/* eslint-disable no-extend-native */
+
 const weather = new Promise((resolve) => {
   setTimeout(() => {
     resolve({ temp: 29, conditions: 'Sunny with Clouds' });
@@ -20,9 +23,16 @@ Promise
 const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
 const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
 
+/* eslint-disable no-extend-native */
 Promise
   .all([postsPromise, streetCarsPromise])
   .then(responses => Promise.all(responses.map(res => res.json())))
   .then((responses) => {
     console.log(responses);
   });
+/* eslint-enable no-extend-native */
+
+/* eslint-disable */
+ga.track();
+/* eslint-enable */
+twttr.trackConversion();
