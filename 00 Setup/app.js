@@ -13,5 +13,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('Now listening');
+    console.log('Now listening...');
 });
