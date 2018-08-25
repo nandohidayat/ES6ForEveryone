@@ -1,7 +1,8 @@
 import slug from 'slug';
 import { url } from './config';
+import base64 from 'base-64';
 
-function User(name, email, website) {
+export default function User(name, email, website) {
     return {
         name,
         email,
@@ -9,10 +10,11 @@ function User(name, email, website) {
     };
 }
 
-function createURL(name) {
+export function createURL(name) {
     return `${url}/users/${slug(name)}`;
 }
 
-function gravatar(email) {
-    const photoURL = 'https://www.gravatar.com/avatar'
+export function gravatar(email) {
+    const hash = base64(email);
+    const photoURL = `https://www.gravatar.com/avatar/${hash}`;
 }
