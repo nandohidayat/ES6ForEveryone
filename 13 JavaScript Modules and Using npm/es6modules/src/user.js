@@ -15,6 +15,7 @@ export function createURL(name) {
 }
 
 export function gravatar(email) {
-    const hash = base64(email);
+    const hash = base64.encode(email);
     const photoURL = `https://www.gravatar.com/avatar/${hash}`;
+    return photoURL;
 }
