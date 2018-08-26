@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SystemJS</title>
+</head>
+
+<body>
+    <script src="./dist/system.js"></script>
+    <script>
+        SystemJS.config({
+            map: {
+                'plugin-babel': './dist/plugin-babel.js',
+                'systemjs-babel-build': './dist/systemjs-babel-browser.js'
+            },
+            transpiler: 'plugin-babel'
+        });
+        System.import('./main.js');
+    </script>
+</body>
+
+</html>
