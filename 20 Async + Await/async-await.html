@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Async Await</title>
 </head>
+
 <body>
     <script>
         function breathe(amount) {
             return new Promise((resolve, reject) => {
-                if(amount < 500) {
+                if (amount < 500) {
                     reject('That is too small of a value');
                 }
                 setTimeout(() => resolve(`Done for ${amount} ms`), amount);
             });
         }
 
-        async function go() {
-            console.log('start');
+        function catchErrors(fn) {
+            return function (...args) {
+                return fn(...args).catch(err => {
+                    console.error('Oh Noo!');
+                    console.error(err);
+                });
+            }
+        }
+
+        async function go(name, last) {
+            console.log(`Starting for ${name} ${last}`);
             let res = await breathe(1000);
             console.log(res);
-            res = await breathe(600);
+            res = await breathe(300);
             console.log(res);
             res = await breathe(750);
             console.log(res);
@@ -28,7 +39,10 @@
             console.log('end');
         }
 
-        go();
-    </script>    
+        const wrappedFunction = catchErrors(go);
+
+        wrappedFunction('Nando', 'Hidayat');
+    </script>
 </body>
+
 </html>
