@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PadStart and PadEnd</title>
+</head>
+<body>
+    <script>
+        // <String>.padStart(<length>, <opt: fill with>)
+        // fill before String with <fill with> until length is the same as <length>
+        // Default <fill with> is space ' '
+
+        // <String>.padEnd(<length>, <opt: fill with>)
+        // same as padStart but in reverse
+        const strings = ['short', 'medium size', 'this is really really long'];
+        const longestString = strings.sort(str => str.length).map(str => str.length)[0];
+
+        strings.forEach(str => console.log(str.padStart(longestString)));
+    </script>    
+</body>
+</html>
