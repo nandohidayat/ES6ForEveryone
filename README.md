@@ -9,5 +9,5 @@ npm i webpack@2.7.0
 ```
 and use properties on Wes Bos video.
 
-### Credit
+## Credit
 All credit goes to @wesbos himself, since he is the one who make this awesome tutorial videos
