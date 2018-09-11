@@ -6,22 +6,35 @@
 <body>
     <script>
         const names = ['nando', 'sita', 'raissa'];
+        
+        // .map is used to return and array with a modified value
+        // primitive function need to write 'function'
 
         const fullNames = names.map(function(name) {
             return `${name} keceh`;
         });
         
+        // in arrow function doesn't need to write 'function', but in exchange, u use '=>'after the args
+
         const fullNames2 = names.map((name) => {
             return `${name} keceh`;
         });
-        
+
+        // if it's only one arguments, brackets is not necessary
+
         const fullNames3 = names.map(name => {
             return `${name} keceh`;
         });
         
+        // if the function is only to return a value. curly brackets is not necessary
+
         const fullNames4 = names.map(name => `${name} keceh`);
         
+        // if no args, brackets is necessary
+
         const fullNames5 = names.map(() => `emang keceh`);
+        
+        // see, u can make a function with this method, no 'function' only '=>'
 
         const sayMyName = (name) => {
             alert(`Hello ${name}!`)
